@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&display=swap');  
+        body{
+        background-color: antiquewhite;
+         }
+         *{
+            box-sizing: border-box;}
+         #div1{
+            border:2px solid;
+            background-color:white;
+            width: 300px;
+            height:auto;
+            border-radius:20px;
+            border-color: black;
+            padding:20px;
+            position:relative;
+            display:inline-block;
+            margin: 30px;
+            left:100px;
+        }
+
+        #div2{
+            border:2px solid;
+            background-color:white;
+            width: 300px;
+            height:auto;
+            border-radius:20px;
+            border-color: black;
+            padding:20px;
+            position:relative;
+            display:inline-block;
+            margin: 30px;
+            z-index: 1;
+            
+        }
+
+        #div3{
+            border:2px solid;
+            background-color:white;
+            width: 300px;
+            height:auto;
+            border-radius:20px;
+            border-color: black;
+            padding:20px;
+            position:relative;
+            display:inline-block;
+            margin: 30px;
+            right:100px;
+        }
+
+        h1{
+            color:red;
+            text-align:center;
+            font-family: "Edu VIC WA NT Hand Pre", cursive;
+            text-decoration: overline;
+            text-decoration-style:dashed ;
+            text-decoration-color: rgb(176, 222, 206);
+            
+        }
+
+        #pika{
+            
+            height: 270px;
+            width:250px;
+        }
+
+        img{
+            width:100%;
+        }
+
+        #container{
+            background-color: aqua;
+            border:2px solid aqua;
+            border-radius:10px;
+        
+            padding:5px;
+            text-align:center; 
+        }
+
+        #red{
+            position:absolute;
+            top: -25px ;
+            right:-10px;
+            color:black;
+            border:2px solid red;
+            border-radius:20px;
+            background-color:red;
+       }
+
+        p{
+            font-family: "Edu SA Hand", cursive;
+        }
+    
+        #div1, #div2, #div3 {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        #div1:hover, #div2:hover, #div3:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        #pika {
+            transition: transform 0.4s ease;
+        }
+        #pika:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.85; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        #red {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        #div1, #div2, #div3 {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @media (max-width: 900px) {
+        #div1, #div2, #div3 {
+            display: block;
+            margin: 20px auto;
+            left: 0;
+            right: 0;
+        }
+        }
+
+        @media (max-width: 500px) {
+        h1 {
+            font-size: 20px;
+        }
+
+        #div1, #div2, #div3 {
+            width: 90%;
+            padding: 10px;
+        }
+
+        #pika {
+            height: 200px;
+            width: 100%;
+        }
+
+        #container {
+            font-size: 14px;
+        }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <h1>Pikachu</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWejx1A1AUS1FgggjfcC-4iUXMg7C-GaJdrQ&amp;s" id="pika">
+
+        <p>Type: Electric</p>
+        <p>Hp: 60</p>
+        <p>Level: 12</p>
+
+        <div id="container">
+            <strong>⚡Thunder Shock - 30</strong>
+        </div>
+
+        <h3 id="red"> &nbsp; rare &nbsp;</h3>
+    </div>
+
+    <div id="div2">
+        <h1>chikorita</h1>
+        <img src="https://pokestop.io/img/pokemon/chikorita-256x256.png" id="pika">
+
+        <p>Type: Fire</p>
+        <p>Hp: 50</p>
+        <p>Level: 10</p>
+
+        <div id="container">
+            <strong>🔥Ember - 25</strong>
+        </div>
+
+        <h3 id="red"> &nbsp; rare &nbsp;</h3>
+    </div>
+
+    <div id="div3">
+        <h1>Squirtle</h1>
+        <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/007.png" id="pika">
+
+        <p>Type: Water</p>
+        <p>Hp: 55</p>
+        <p>Level: 11</p>
+
+        <div id="container">
+            <strong>💧Water Gun - 28</strong>
+        </div>
+
+        <h3 id="red"> &nbsp; rare &nbsp;</h3>
+    </div>
+
+</body>
+
+</html>

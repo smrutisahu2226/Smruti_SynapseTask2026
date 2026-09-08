@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="icon" type="image/png" href="https://www.alpineriverhill.com/assets/img/blacklogo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       
+    <title>Document</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .hding1{
+            color:#E8762B;
+            font-size: 24pt;
+            text-align: center;
+            font-family: "Nunito", sans-serif;
+        }
+
+        .hding2{
+            text-align: center;
+            font-family: "Nunito", sans-serif;
+            font-size: 18pt;
+        }
+
+        .horln{
+            display: block;
+            margin-block-start: 0.5em;
+            margin-block-end: 0.5em;
+            margin-inline-start: auto;
+            margin-inline-end: auto;
+            border-top: 1px solid rgba(0, 0, 0, .1);
+            width:50%;
+        }
+
+        .swiper{
+            width: 100%;
+            height: min-content;
+            padding-top: 30px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background:rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .features-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap:40px 20px;
+            width:90%;
+            margin: 40px auto;
+        }
+
+        .featured-item{
+            text-align: center;
+            vertical-align: top;
+            padding:12px 5px;
+        }
+
+        .feature-icon{
+            font-size: 40px;
+            color: #ff7a22;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .feature-title{
+            font-weight: bold;
+            font-size: 1.15em;
+            margin-bottom: 3px;
+        }
+
+        .feature-desc{
+            font-size: 0.97em;
+            color: #020000cf;
+            margin-top: 7px;
+            font-weight: lighter;
+        }
+
+        @media (max-width: 780px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .features-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .feature-item {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeUp 0.8s ease-in-out forwards;
+    }
+
+    .feature-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    </style>
+</head>
+<body>
+    <br>
+    <h1 class="hding1">WELCOME TO ALPINE RIVERHILL</h1>
+    <h2 class="hding2">luxury Defined</h2>
+    <hr class="horln">
+
+    <div class="wow animate_animated animate_zoomIn">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-bed"></i></span>
+                            <div class="feature-title">6 Master Bedrooms</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Air conditioned with an attached balcony</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-couch"></i></span>
+                            <div class="feature-title">Spacious Living Room</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Sofa Set | Dining Area | Fully Air Conditioned</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-users-line"></i></span>
+                            <div class="feature-title">25-30 guests</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Suitable for family, friends and corporate getaways</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-water-ladder"></i></span>
+                            <div class="feature-title">Private Swimming Pool</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Full size | Waterfall | Patio loungers | Underwater LED Lighting</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-bowl-food"></i></span>
+                            <div class="feature-title">Meals</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Vegetarian | Non-Vegetarian | Jain<br>Meal Plan (Breakfast, Lunch, High Tea, Dinner)</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-music"></i></span>
+                            <div class="feature-title">Music System</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Bluetooth, USB & AUX connectivity | Karaoke</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-wifi"></i></span>
+                            <div class="feature-title">High-Speed WiFi</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Speed upto 30 MBPS</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-tv"></i></span>
+                            <div class="feature-title">Smart Television</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Full HD 50 inch LED</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-house-signal"></i></span>
+                            <div class="feature-title">Online Streaming</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Netflix | Disney + Hotstar | Amazon Prime</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-drumstick-bite"></i></span>
+                            <div class="feature-title">Barbeque</div>
+                            <hr class="m1">
+                            <div class="feature-desc"><br></div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><span class="fa-solid fa-smoking"></span></i></span>
+                            <div class="feature-title">Seesha</div>
+                            <hr class="m1">
+                            <div class="feature-desc"><br></div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-brands fa-free-code-camp"></i></span>
+                            <div class="feature-title">Bonfire</div>
+                            <hr class="m1">
+                            <div class="feature-desc"><br></div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-bottle-water"></i></span>
+                            <div class="feature-title">Packaged Drinking Water</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Complimentary</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-house-user"></i></span>
+                            <div class="feature-title">Concierge and Housekeeping Staff</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Professional, Highly trained and Experienced</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-book-open-reader"></i></span>
+                            <div class="feature-title">Mini Library</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Fiction | Biography | Children | Fantasy</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-chess-king"></i></span>
+                            <div class="feature-title">Indoor Activities</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Carrom | Chess | UNO | Jenga | Scrabble |<br> Monopoly</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-futbol"></i></span>
+                            <div class="feature-title">Outdoor Sports</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Cricket Kit | Badminton Set | Football</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-martini-glass-citrus"></i></span>
+                            <div class="feature-title">Mocktails On Arrival</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Pina Colada | Mojito | Blue Curacao</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-layer-group"></i></span>
+                            <div class="feature-title">High Quality Matresses, Towels and <br> Linens</div>
+                            <hr class="m1">
+                            <div class="feature-desc"><br></div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-square-parking"></i></span>
+                            <div class="feature-title">Secure Car Park</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Under CCTV Surveillance</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-building-shield"></i></span>
+                            <div class="feature-title">24X7 Security</div>
+                            <hr class="m1">
+                            <div class="feature-desc">CCTV Cameras | Security Guard | Free<br> Extinguishers</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-walkie-talkie"></i></span>
+                            <div class="feature-title">Intercom</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Room to Room | Room to Housekeeping</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-building"></i></span>
+                            <div class="feature-title">Terrace</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Large sitout area at Level 1</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-restroom"></i></span>
+                            <div class="feature-title">8 Washrooms</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Modern fittings and amenities</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-paw"></i></span>
+                            <div class="feature-title">Pet Friendly</div>
+                            <hr class="m1">
+                            <div class="feature-desc">We love our four-legged friends</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-ban"></i></span>
+                            <div class="feature-title">Swimming pool timings</div>
+                            <hr class="m1">
+                            <div class="feature-desc">No Restriction</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-cake-candles"></i></span>
+                            <div class="feature-title">Events,Functions and Parties</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Planning | Organizing | Execution</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-kitchen-set"></i></span>
+                            <div class="feature-title">Fully stocked Kitchen</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Refrigerator | Microwave | Cookware | Gas Stove <br> & Cyinder</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-toilets-portable"></i></span>
+                            <div class="feature-title">Toiletries<br>Ignis Range by Five Elements®</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Shampoo | Hair Conditioner | Body Lotion | Soap | Comb | Dental Kit |<br> Hand Wash <br>
+                                Paraben Free | PETA Certified | Vegan | ISO 22716 GMP | FDA Approved</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-person-booth"></i></span>
+                            <div class="feature-title">Wardrobes and garment hangers</div>
+                            <hr class="m1">
+                            <div class="feature-desc">In all bedrooms</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-kit-medical"></i></span>
+                            <div class="feature-title">First Aid kit</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Emergency supplies</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-layer-group"></i></span>
+                            <div class="feature-title">Extra Mattresses</div>
+                            <hr class="m1">
+                            <div class="feature-desc">For additional guests</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-user-doctor"></i></span>
+                            <div class="feature-title">Doctor on call</div>
+                            <hr class="m1">
+                            <div class="feature-desc">24×7</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-car"></i></span>
+                            <div class="feature-title">Airport Transfers</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Pickup and drop off services</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-handshake"></i></span>
+                            <div class="feature-title">24×7 Guest Care</div>
+                            <hr class="m1">
+                            <div class="feature-desc">+91 9667555554</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-building-user"></i></span>
+                            <div class="feature-title">Driver's Quarters</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Accommodation | Meals</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-ruler-combined"></i></span>
+                            <div class="feature-title">Total area spread over</div>
+                            <hr class="m1">
+                            <div class="feature-desc">8,000 sq feet</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-clock"></i></span>
+                            <div class="feature-title">Check-in and Check-Out Timings</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Flexible</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-car-battery"></i></span>
+                            <div class="feature-title">Inverter</div>
+                            <hr class="m1">
+                            <div class="feature-desc">Incase of electric cut-out</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-virus"></i></span>
+                            <div class="feature-title">Covid-19 Safety Practices</div>
+                            <hr class="m1">
+                            <div class="feature-desc">WHO Recommended</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-house-user"></i></span>
+                            <div class="feature-title">In House Caretaker</div>
+                            <hr class="m1">
+                            <div class="feature-desc">24 Hours</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-shirt"></i></span>
+                            <div class="feature-title">Laundry & Dry Cleaning Services</div>
+                            <hr class="m1">
+                            <div class="feature-desc"><br></div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-paw"></i></span>
+                            <div class="feature-title">UV Water Purifier</div>
+                            <hr class="m1">
+                            <div class="feature-desc"><br></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            keyboard: {
+                enabled: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>

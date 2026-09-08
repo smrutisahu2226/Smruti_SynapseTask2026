@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }    
+        body{
+            background-color: rgba(255,255,255,0.2);
+            margin:0%;
+            padding: 0%;
+        }
+        
+        nav{
+            background-color:rgb(14, 14, 60);
+            position: relative;
+            padding:10px;
+        }
+
+        #div1{
+            display:inline-block;
+        }
+        
+        #img1{ 
+            height:45px;
+            border:3px solid rgb(73, 184, 173);
+            border-radius: 50px;
+        }
+
+        #div2{
+            display:inline-block;
+            position: absolute;
+            right: 0%;
+            padding-top:22px ;
+            font-size: 20px;
+        }
+
+        span{
+            color:aquamarine;
+            font-size: 20px;
+        }
+
+        a{
+            text-decoration: none;
+            color:rgb(255,255,255);
+            padding:10px;
+        }
+
+        a:hover{
+            text-decoration: underline dotted;
+            color:rgb(235, 189, 50);
+            
+        }
+
+        #img2{
+            width:100%;
+            height:600px;
+            
+        }
+        #container{
+            display:flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .card{
+            background-color:rgb(239, 227, 227);
+            border:3px solid none;
+            border-radius: 20px;
+            height: auto;
+            width:200px;
+            display:inline-block;
+            margin:10px;
+            text-align: center;
+            padding:10px;
+            
+        }
+
+        #car1{
+            width:165px;
+            border-radius: 20px;
+            padding:10px ;
+            
+            
+        }
+
+        h3{
+            text-align: center;
+            color:rgb(116, 31, 31);
+            margin:0%;
+        }
+
+        #p1{
+            text-align: center;
+            color:brown;
+        }
+
+        .price{
+            background-color: rgb(154, 38, 38);
+            border:0px solid;
+            border-radius: 10px;
+            display:inline-block;
+            padding: 5px;
+            color:white;
+            
+        }
+
+        .below {
+            color: #ffffff;
+            display: inline-block;
+            margin: 10px;
+            width: 30%;
+            vertical-align: top;
+            }
+
+        footer {
+        background-color: rgb(50, 50, 116);
+        padding: 20px;
+        }
+
+        #last {
+        background-color: rgb(49, 49, 128);
+        text-align: center;
+        color: #ffffff;
+        padding: 10px;
+        }
+
+        swiper-container {
+        width: 100%;
+        height: 100%;
+        }
+
+        swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+        nav {
+        animation: slideDown 0.8s ease-in-out;
+        }
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInZoom 0.6s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeInZoom {
+            from {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        #car1 {
+            transition: transform 0.4s ease;
+        }
+        #car1:hover {
+            transform: scale(1.05);
+        }
+
+        .price {
+            transition: background-color 0.4s ease, transform 0.3s ease;
+        }
+        .price:hover {
+            background-color: rgb(201, 48, 48);
+            transform: scale(1.1);
+        }
+
+        footer, #last {
+            animation: fadeUp 1s ease;
+        }
+        @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+        @media (max-width: 1024px) {
+        #img2 {
+            height: 450px;
+        }
+
+        .card {
+            width: 45%;
+        }
+
+        #div2 {
+            font-size: 16px;
+            padding-top: 15px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            width: 60%;
+        }
+
+        #img2 {
+            height: 300px;
+        }
+
+        #div2 {
+            position: static;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        #div1 {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        span {
+            font-size: 16px;
+        }
+
+        a {
+            font-size: 14px;
+            padding: 5px;
+        }
+
+        .card {
+            width: 50%;
+            padding: 5px;
+        }
+
+        #img2 {
+            height: 200px;
+        }
+
+        #car1 {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="div1">
+            <img src="https://m.media-amazon.com/images/I/61Rx9tHudUL._AC_UF1000,1000_QL80_.jpg" alt="logo" id="img1">
+            <span>🎉MyCarShowroom🚗</span>
+        </div>
+        <div id="div2">
+            
+            <a href="#img2"><svg xmlns="http://www.w3.org/2000/svg" height="18" width="20.25" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#aabfe4" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>Home</a>
+            <a href="#about"><svg xmlns="http://www.w3.org/2000/svg" height="18" width="20.25" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#aabfe4" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>About us</a>
+            <a href="#about"><svg xmlns="http://www.w3.org/2000/svg" height="18" width="20.25" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#aabfe4" d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>Login</a>
+            <a href="#about"><svg xmlns="http://www.w3.org/2000/svg" height="18" width="20.25" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#aabfe4" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>Gmail</a>
+        </div>
+    </nav>
+
+    <swiper-container class="mySwiper" navigation="true" >
+    <swiper-slide><img id="img2" src="https://static.wixstatic.com/media/dee346_2ddca3830cb449f7a51bf41142521a6c~mv2.jpg/v1/fit/w_1000%2Ch_1000%2Cal_c%2Cq_80/file.jpg"></swiper-slide>
+    <swiper-slide><img id="img2" src="https://static.wixstatic.com/media/dee346_2ddca3830cb449f7a51bf41142521a6c~mv2.jpg/v1/fit/w_1000%2Ch_1000%2Cal_c%2Cq_80/file.jpg"></swiper-slide>
+    <swiper-slide><img id="img2" src="https://static.wixstatic.com/media/dee346_2ddca3830cb449f7a51bf41142521a6c~mv2.jpg/v1/fit/w_1000%2Ch_1000%2Cal_c%2Cq_80/file.jpg"></swiper-slide>
+    <swiper-slide><img id="img2" src="https://static.wixstatic.com/media/dee346_2ddca3830cb449f7a51bf41142521a6c~mv2.jpg/v1/fit/w_1000%2Ch_1000%2Cal_c%2Cq_80/file.jpg"></swiper-slide>
+     </swiper-container>
+
+<div id="container">
+    <div class="card">
+        <img src=" https://stimg.cardekho.com/images/carexteriorimages/930x620/Mercedes-Benz/S-Class/10853/1690451611932/front-left-side-47.jpg" id="car1">
+        <h3>Mercedes-Benz S-Class</h3>
+
+        <p id="p1">
+            Unmatched luxury, supreme comfort. 💎🚘🛋️
+        </p>
+
+        <div class="price">
+            ₹2.11 crore
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/X5-2023/10452/1688992642182/front-left-side-47.jpg" id="car1">
+        <h3> BMW X5</h3>
+
+        <p id="p1"> 
+            Bold, luxurious, and built for power. 💪🚙💼
+        </p>
+
+        <div class="price">
+            ₹1.12 crore
+        </div>
+    </div>
+
+    <div class="card">
+        <img src=" https://stimg.cardekho.com/images/carexteriorimages/930x620/Audi/Q7/12198/1732789850926/front-left-side-47.jpg" id="car1">
+        <h3>Audi Q7</h3>
+
+        <p id="p1">
+            Elegance meets adventure in every drive. ✨🌍🚗
+        </p>
+
+        <div class="price">
+            ₹97.85 lakh
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI4xHQVUDfHE470vq_AFaZZwgwRfojStYG3w&s" id="car1">
+        <h3> Jaguar F-Type</h3>
+
+        <p id="p1">
+            Pure performance with breathtaking style. 🏁🔥🚀
+        </p>
+
+        <div class="price">
+            ₹2.61 crore 
+        </div>
+    </div>
+</div>
+    <br>
+
+    <footer id="about">
+        <div class="below">
+            <h4>About us</h4>
+            <p>
+            We believe in more than just vehicles — <br>
+            we deliver journeys, style, and satisfaction. 🚘💼🌟
+            </p>
+        </div>
+
+        <div class="below">
+            <h4>Quick links</h4>
+            <a href="#img2" style="color:white">Home</a><br>
+            <a href="#card" style="color:white">Services</a><br>
+            <a href="#below" style="color:white">About us</a>
+        </div>
+
+        <div class="below">
+            <h4>Contact us</h4>
+            <p>
+            Email: abc@gmail.com<br>
+            Phone: 888978543<br>
+            Location: Thane, India
+            </p>
+        </div>
+    </footer>
+   
+    <div id="last">
+    <p>&copy; 2025 Car 🎉 MyCarShowroom 🚗. Designed by Smrutirani Sahu</p>
+    </div>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+</html>

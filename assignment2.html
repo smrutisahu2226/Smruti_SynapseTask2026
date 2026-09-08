@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-2</title>
+</head>
+
+<body>
+    <h1 id="top">Web Development: Day 2</h1>
+    <p><strong>Myself John Doe</strong>, I learned the following topics in today's lecture:</p>
+
+    <ul>
+        <li>Hyperlinks & Bookmarks</li>
+        <li>Images</li>
+        <li>Lists</li>
+        <li>Tables</li>
+        <li>Forms</li>
+    </ul>
+
+    <hr>
+
+    <h3>My friends who attended this lecture:</h3>
+
+    <table border="1" cellspacing="0" cellpadding="5" width="100%">
+        <thead>
+            <tr>
+                <th width="5%">Sr</th>
+                <th>Name</th>
+                <th width="18%">Dept</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Sharukh Khan</td>
+                <td>Information Technology (IF)</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Salman Khan</td>
+                <td>Information Technology (IF)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Aamir Khan</td>
+                <td>Information Technology (IF)</td>
+            </tr>
+        </tbody>
+    </table>
+<table border="1" cellspacing="0" cellpadding="5" width="100%">
+        <thead>
+            <tr>
+                <th width="5%">Sr</th>
+                <th>Name</th>
+                <th width="18%">Dept</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Sharukh Khan</td>
+                <td>Information Technology (IF)</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Meera Khan</td>
+                <td>Information Technology (IF)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Saif Khan</td>
+                <td>Information Technology (IF)</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2>Feedback Form:</h2>
+
+    <form method="post" action="mhssp.html">
+        <p><strong>Name:</strong>
+        <input type="text" name="name" id="name" maxlength="50" placeholder="Name Please.." value="Ms./Mr." required></p>
+
+        <p><strong>Email:</strong>
+        <input type="email" name="email" id="email" required></p>
+
+        <p><strong>Feedback:</strong>
+            <label><input type="radio" name="feedback" value="Awesome"> Awesome</label>
+            <label><input type="radio" name="feedback" value="Good"> Good</label>
+            <label><input type="radio" name="feedback" value="Average"> Average</label>
+            <label><input type="radio" name="feedback" value="Weak"> Weak</label>
+            <label><input type="radio" name="feedback" value="Poor"> Poor</label>
+        </p>
+
+        <p><strong>Subject:</strong>
+            <select name="subject" id="subject">
+                <option value="Web development">Web development</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                <option value="Mobile App Development">Mobile App Development</option>
+            </select>
+
+            <input type="password" name="subject" id="subject">
+        <br>
+        </p>
+
+        <p><strong>Message:</strong><br>
+        <textarea id="message" name="message" rows="5" cols="40"></textarea></p>
+
+        <p><input type="submit" value="Submit"></p>
+    </form>
+
+    <hr>
+
+    <p>
+        <a href="https://www.google.co.in" target="_blank">Click here to visit Google</a> &nbsp;|&nbsp;
+        <a href="#top">Click here to go to top</a>
+    </p>
+
+    <p>Date of Birth: <input type="date" name="dob" id="dob"></p>
+
+    Favorite Color: <input type="color" name="favcolor" id="favcolor">
+</body>
+</html>
